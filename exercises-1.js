@@ -34,10 +34,14 @@ var mark = {
     finishingTime4: 108.9,
     finishingTime5: 97.5
 };
-
 var getAverageTime = function(person) {
     "use strict";
-    // ... return ...
+    var sumTime=0;
+    var keysArray=Object.keys(person);
+    for(var i=0;i<Object.keys(person).length;i++){
+      sumTime=(sumTime+person[keysArray[i]]);
+    }
+    return sumTime/Object.keys(person).length;
 }
 
 console.log(getAverageTime(matt));
@@ -76,7 +80,12 @@ function addToBank(account, savings, retirement, checking) {
 
 function getSumOfAccounts(account) {
     "use strict";
-    // return ...
+    var accSum=0;
+    var keysArray=Object.keys(account);
+    for(var i=0;i<Object.keys(account).length;i++){
+      accSum=(accSum+account[keysArray[i]]);
+    }
+    return accSum;
 }
 
 addToBank(MattsBankAccount, 100, 10, 1);
@@ -86,3 +95,24 @@ var sumOfMatts = getSumOfAccounts(MattsBankAccount);
 var sumOfRobertos = getSumOfAccounts(RobertosBankAccount);
 
 console.log(sumOfMatts - sumOfRobertos); // should calculate to -158
+
+
+
+
+// HARD MODE*******************************************************************
+
+function hardMode(){
+  "use strict";
+  var myArray=[];
+  for(var i=1;i<101;i++){
+    if(i%3===0){
+      myArray.push("fizz");
+    }else if(i%5===0){
+      myArray.push("Buzz");
+    }else{
+      myArray.push(i);
+    }
+  }
+  console.log(myArray);
+}
+hardMode();
