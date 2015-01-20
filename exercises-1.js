@@ -24,7 +24,8 @@ var matt = {
     finishingTime2: 210.4,
     finishingTime3: 235.1,
     finishingTime4: 208.9,
-    finishingTime5: 197.5
+    finishingTime5: 197.5,
+    finishingTime6: 227.4
 };
 
 var mark = {
